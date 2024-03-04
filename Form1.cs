@@ -86,6 +86,12 @@ namespace Lab_reapao__1
 
         }
 
+        public void CalcularSueldo()
+        {
+            int sueldo;
+            
+        }
+
         private void buttonCargarDatos_Click(object sender, EventArgs e)
         {
             CargarEmpleados();
@@ -93,8 +99,6 @@ namespace Lab_reapao__1
 
             CargarAsistencia();
             MostrarAsistencia();
-
-
 
         }
     }
