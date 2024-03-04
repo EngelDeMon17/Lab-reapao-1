@@ -32,8 +32,11 @@ namespace Lab_reapao__1
             this.dataGridViewEmpleados = new System.Windows.Forms.DataGridView();
             this.dataGridViewAsistencia = new System.Windows.Forms.DataGridView();
             this.buttonCargarDatos = new System.Windows.Forms.Button();
+            this.dataGridViewSueldos = new System.Windows.Forms.DataGridView();
+            this.buttonCalcularSueldo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmpleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAsistencia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSueldos)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewEmpleados
@@ -47,7 +50,7 @@ namespace Lab_reapao__1
             // dataGridViewAsistencia
             // 
             this.dataGridViewAsistencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAsistencia.Location = new System.Drawing.Point(389, 33);
+            this.dataGridViewAsistencia.Location = new System.Drawing.Point(289, 33);
             this.dataGridViewAsistencia.Name = "dataGridViewAsistencia";
             this.dataGridViewAsistencia.Size = new System.Drawing.Size(240, 150);
             this.dataGridViewAsistencia.TabIndex = 1;
@@ -64,12 +67,32 @@ namespace Lab_reapao__1
             this.buttonCargarDatos.UseVisualStyleBackColor = true;
             this.buttonCargarDatos.Click += new System.EventHandler(this.buttonCargarDatos_Click);
             // 
+            // dataGridViewSueldos
+            // 
+            this.dataGridViewSueldos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSueldos.Location = new System.Drawing.Point(535, 33);
+            this.dataGridViewSueldos.Name = "dataGridViewSueldos";
+            this.dataGridViewSueldos.Size = new System.Drawing.Size(240, 150);
+            this.dataGridViewSueldos.TabIndex = 3;
+            // 
+            // buttonCalcularSueldo
+            // 
+            this.buttonCalcularSueldo.Location = new System.Drawing.Point(415, 227);
+            this.buttonCalcularSueldo.Name = "buttonCalcularSueldo";
+            this.buttonCalcularSueldo.Size = new System.Drawing.Size(146, 106);
+            this.buttonCalcularSueldo.TabIndex = 4;
+            this.buttonCalcularSueldo.Text = "Calcular sueldo";
+            this.buttonCalcularSueldo.UseVisualStyleBackColor = true;
+            this.buttonCalcularSueldo.Click += new System.EventHandler(this.buttonCalcularSueldo_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonCalcularSueldo);
+            this.Controls.Add(this.dataGridViewSueldos);
             this.Controls.Add(this.buttonCargarDatos);
             this.Controls.Add(this.dataGridViewAsistencia);
             this.Controls.Add(this.dataGridViewEmpleados);
@@ -77,6 +100,7 @@ namespace Lab_reapao__1
             this.Text = "EMPLEADOS";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmpleados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAsistencia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSueldos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -86,6 +110,8 @@ namespace Lab_reapao__1
         private System.Windows.Forms.DataGridView dataGridViewEmpleados;
         private System.Windows.Forms.DataGridView dataGridViewAsistencia;
         private System.Windows.Forms.Button buttonCargarDatos;
+        private System.Windows.Forms.DataGridView dataGridViewSueldos;
+        private System.Windows.Forms.Button buttonCalcularSueldo;
     }
 }
 

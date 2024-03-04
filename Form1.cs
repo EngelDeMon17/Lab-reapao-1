@@ -16,6 +16,7 @@ namespace Lab_reapao__1
         //cargar empleados
         List<Empleado> empleados = new List<Empleado>();
         List<Asistencia> asistencias = new List<Asistencia>();
+        List<Sueldo> sueldos = new List<Sueldo>();
         public Form1()
         {
             InitializeComponent();
@@ -85,12 +86,39 @@ namespace Lab_reapao__1
             dataGridViewAsistencia.Refresh();
 
         }
-
-        public void CalcularSueldo()
+        public void MostrarSueldo()
         {
-            int sueldo;
-            
+            dataGridViewSueldos.DataSource = null;
+            dataGridViewSueldos.DataSource = sueldos;
+            dataGridViewSueldos.Refresh();
+
         }
+        private void buttonCalcularSueldo_Click(object sender, EventArgs e)
+        {
+            
+            //para recorrer otra lista
+            //                            toma esta variable
+            //         y la copia aqui          /
+            foreach (Empleado empleado in empleados)
+            {
+                // int noEmpleado = empleado.NoEmpleado;
+                foreach (Asistencia asistencia in asistencias)
+                {
+                    if (empleado.NoEmpleado == asistencia.NoEmpleado)
+                    {
+                        Sueldo sueldo = new Sueldo();
+                        sueldo.NombreEmpleado = empleado.Nombre;
+                        sueldo.Mes = asistencia.Mes;
+                        sueldo.SueldoMensual = empleado.SueldoHora * asistencia.HorasMes;
+
+                        sueldos.Add(sueldo);
+                    }
+                }
+            }
+            MostrarSueldo();
+        }
+
+        
 
         private void buttonCargarDatos_Click(object sender, EventArgs e)
         {
@@ -100,6 +128,9 @@ namespace Lab_reapao__1
             CargarAsistencia();
             MostrarAsistencia();
 
+            
         }
+
+       
     }
 }

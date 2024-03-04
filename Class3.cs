@@ -9,11 +9,11 @@ namespace Lab_reapao__1
     class Sueldo
     {
         String nombreEmpleado;
-        string Mes;
+        int mes;
         Decimal sueldoMensual;
 
         public string NombreEmpleado { get => nombreEmpleado; set => nombreEmpleado = value; }
-        public string Mes1 { get => Mes; set => Mes = value; }
         public decimal SueldoMensual { get => sueldoMensual; set => sueldoMensual = value; }
+        public int Mes { get => mes; set => mes = value; }
     }
 }
